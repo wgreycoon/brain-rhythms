@@ -3,9 +3,8 @@ function [spindle_det, filtTraces] = detect_spindles( Data, ch_names, fs, bpparm
 % Well, guess there's some work to be done on the documentation side of
 % things here....
 
-% As of now, EVERYTHING works EXCEPT the wavelet-derived frequency measures
-% (center frequency and frequency drift).  DO NOT TRUST THOSE NUMBERS I
-% HAVEN'T DEBUGGED IT YET!!!!
+% As of now, EVERYTHING works EXCEPT some extra bells/whistles that are 
+% non-standard (center frequency and frequency drift). 
 %
 % Everything else purrs like a kitten
 %
