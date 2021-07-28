@@ -6,7 +6,17 @@ function [spindle_det, filtTraces] = detect_spindles( Data, ch_names, fs, bpparm
 % As of now, EVERYTHING works EXCEPT some extra bells/whistles that are 
 % non-standard (center frequency and frequency drift). 
 %
-% Everything else purrs like a kitten
+% Everything else purrs like a kitten.
+%
+%           Data:  2D (or 1D) matrix of samples x channels (or channels x samples; the function gets it automatically).
+%       ch_names:  strings (ex. {“Fp1”,”Fp2”,…}
+%             fs:  sampling rate in Hz
+%        bpparms:  choose a band pass filter.  In the example we use [8 10 16 18], to specify a pass between 10 and 16Hz (sigma band), with 3dB filter cutoffs at 8 and 18Hz, respectively.
+%      doWavelet:  for characterization of spindle properties; you don’t need it!
+%    ampl_factor:  use 9.0 (this is the validated cutoff, in units of spread
+%     minmaxdurs:  cutoffs for min/max spindle length, in milliseconds (ex. [400 3000])
+%        sigproc:  this is a string toggle between two ways of preprocessing. ALWAYS use ‘wavelet’ for the validated Warby detector!!
+%  manualthreshs:  just leave empty, not needed (ex. [])
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author: Will Coon, PhD, wcoon@mgh.harvard.edu
