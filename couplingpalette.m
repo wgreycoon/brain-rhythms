@@ -41,7 +41,7 @@ function [ couplingpalettevals ] = couplingpalette( phasesigdata, ampsigdata, ph
 %     n            :    scalar for wavelet construction (see above)
 %     
 %
-%     Example = couplingpalette( ecog_data, ecog_data, [1:30], [10 15 8 17], 7 );
+%     Example = couplingpalette( ecog_data, ecog_data, [1:30], [10 15 8 17], 250, 7 );
 %
 % ---------------------------
 %
